@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E2GRUPO4.Vsitas.Lista">
+    
+    
+    <ListView x:Name="lstFirmas"
+              HasUnevenRows="True"
+              SeparatorVisibility="None"
+              SelectionMode="Single"
+              ItemSelected="lstFirmas_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame CornerRadius="10"
+                           Padding="5">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.ColumnSpan="2"
+                                       Grid.RowSpan="4"
+                                       Source="{Binding Icono}"
+                                       HeightRequest="10"
+                                       WidthRequest="300" />
+                            <Label Grid.Row="6"
+                                       Grid.Column="0"
+                                       FontSize="Medium"
+                                       Text="{Binding latitud}" />
+                            <Label Grid.Row="6"
+                                       Grid.Column="1"
+                                       FontSize="Medium"
+                                       Text="{Binding logintud}" />
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+        
+   
+
+ 
+   
+</ContentPage>

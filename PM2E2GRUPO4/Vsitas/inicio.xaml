@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="PM2E2GRUPO4.Vsitas.inicio">
+    
+    
+    
+    <StackLayout BackgroundColor="#222124">
+        <Label Text="ExamenIIP"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="#ECEAE4"
+               Margin="0,10" />
+        <Frame BackgroundColor="#ECEAE4"
+               VerticalOptions="FillAndExpand"
+               Margin="20,0,20,10"
+               CornerRadius="20"
+               HasShadow="False">
+            <StackLayout>
+                <Label Text="Tarea 2.2"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#222124"
+                       FontSize="36" />
+                <forms:SignaturePadView x:Name="imagenCelular"
+                                        StrokeColor="Blue"
+                                        BackgroundColor="White"
+                                        StrokeWidth="3"
+                                        WidthRequest="280"
+                                        HeightRequest="360" />
+                <Entry x:Name="txtlongitud"
+                       Placeholder="longitud" 
+                       IsEnabled="false"/>
+                <Entry x:Name="txtlatitud"
+                       Placeholder="latitud"
+                       IsEnabled="false"/>
+                <Button x:Name="btnGuardar"
+                        Text="Guardar"
+                        Clicked="btnGuardar_Clicked"
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        FontAttributes="Bold" />
+                <Button x:Name="btnLista"
+                        Text="Lista"
+                        Clicked="btnLista_Clicked"                       
+                        CornerRadius="30"
+                        BackgroundColor="#222124"
+                        TextColor="#ECEAE4"
+                        FontAttributes="Bold" />
+                <Label Text="@ Bairon Vallecillo 201910050106"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#222124"
+                       FontSize="10" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
